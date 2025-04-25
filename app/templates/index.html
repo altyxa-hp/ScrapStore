@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Категории</title>
+</head>
+<body>
+    <h1>ScrapStore</h1>
+    <h2>Категории</h2>
+    <ul>
+        {% for category in categories %}
+            <li>
+                <a href="{% url 'category_products' category.id %}">
+                    {{ category.name }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
